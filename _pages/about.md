@@ -5,7 +5,7 @@ permalink: /
 subtitle: Aspiring Quantum Computing Researcher
 
 profile:
-  align: left
+  align: right
   image: Headshot.jpeg
   image_circular: true # crops the image to make it circular
   more_info: >
