@@ -2,7 +2,7 @@
 layout: page
 title: submenus
 nav: false
-nav_order: 
+#nav_order: 
 dropdown: true
 children:
   - title: bookshelf
