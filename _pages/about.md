@@ -6,7 +6,7 @@ subtitle: Aspiring Quantum Computing Researcher
 
 profile:
   align: left
-  image: prof_pic.jpg
+  image: Headshot.jpeg
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>Grand Junction, CO 81501</p>
