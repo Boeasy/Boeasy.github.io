@@ -1,7 +1,7 @@
 ---
 layout: about
 title: about
-permalink: /
+permalink:
 subtitle: Aspiring Quantum Computing Researcher
 
 profile:
