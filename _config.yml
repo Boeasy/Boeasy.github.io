@@ -203,7 +203,7 @@ plugins:
   - jekyll-archives-v2
   - jekyll-email-protect
   - jekyll-feed
-  - jekyll-get-json
+  # - jekyll-get-json  # Disabled to prevent loading resume.json
   - jekyll-imagemagick
   - jekyll-jupyter-notebook
   - jekyll-link-attributes
