@@ -188,6 +188,7 @@ exclude:
   - package-lock.json
   - _pages/about_einstein.md
   - purgecss.config.js
+  - _posts/old/
   - _drafts/
   - _templates/
   - README.md
