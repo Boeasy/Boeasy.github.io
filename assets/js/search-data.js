@@ -10,7 +10,7 @@ ninja.data = [{
       window.location.href = "/";
     },
   },{id: "nav-projects",
-          title: "Projects",
+          title: "projects",
           description: "Display of research projects",
           section: "Navigation",
           handler: () => {
@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-repositories",
           title: "repositories",
-          description: "Need to fill this in more, and organize my code such that it&#39;s viewable...",
+          description: "My code repositories and related research documentation.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
@@ -30,14 +30,36 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-research-notes",
-          title: "research notes",
+        },{id: "nav-blog",
+          title: "blog",
           description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/research-notes/index.html";
+            window.location.href = "/blog/";
           },
-        },{id: "post-first-post",
+        },{id: "post-test-note",
+        
+          title: "test note",
+        
+        description: "This is a test note to make sure this isn&#39;t breaking pagination.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/test-research-note/";
+          
+        },
+      },{id: "post-test-post-2",
+        
+          title: "test post 2",
+        
+        description: "testing out the new blog script agian",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/test-post-2/";
+          
+        },
+      },{id: "post-first-post",
         
           title: "First Post",
         
@@ -58,21 +80,6 @@ ninja.data = [{
           description: "Designing and simulating a waveguide for quantum optics applications",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Waveguide/";
-            },},{id: "research_notes-literature-review-quantum-photonic-integration",
-          title: 'Literature Review: Quantum Photonic Integration',
-          description: "Summary of recent advances in silicon nitride platforms for quantum optics",
-          section: "Research_notes",handler: () => {
-              window.location.href = "/research_notes/2025-08-03-quantum-photonics-review/";
-            },},{id: "research_notes-waveguide-mode-analysis-results",
-          title: 'Waveguide Mode Analysis Results',
-          description: "Comparison of TE and TM modes in silicon nitride waveguides for quantum applications",
-          section: "Research_notes",handler: () => {
-              window.location.href = "/research_notes/2025-08-04-waveguide-modes/";
-            },},{id: "research_notes-lammps-simulation-parameters-optimization",
-          title: 'LAMMPS Simulation Parameters Optimization',
-          description: "Investigation of timestep and ensemble parameters for accurate gold stress-strain simulations",
-          section: "Research_notes",handler: () => {
-              window.location.href = "/research_notes/2025-08-05-lammps-optimization/";
             },},{
         id: 'social-email',
         title: 'email',

@@ -1,80 +1,75 @@
-# Research Notes Scripts
+# Blog Post Scripts
 
-This directory contains scripts to automatically generate research notes with proper front matter.
+This directory contains scripts to automatically generate blog posts with proper front matter. The scripts can create both regular blog posts and research note posts with special tagging.
 
 ## Available Scripts
 
-### 1. `create_research_note.sh` (Shell Script)
-A bash script for quick note creation with command-line arguments.
+### 1. `create_blog_post.sh` (Shell Script)
+A bash script for quick blog post creation with command-line arguments.
 
 **Usage:**
 ```bash
-./scripts/create_research_note.sh "Note Title" "Project Name" ["Description"]
+./scripts/create_blog_post.sh "Post Title" [type] ["Project Name"] ["Description"]
 ```
+
+**Post Types:**
+- `research-note` - A research note (default)
+- `blog-post` - A regular blog post
 
 **Examples:**
 ```bash
-# Basic usage
-./scripts/create_research_note.sh "Force Field Validation" "Modelling Gold Stress Strain Curves in LAMMPS"
+# Create a research note
+./scripts/create_blog_post.sh "Force Field Validation" research-note "Modelling Gold Stress Strain Curves in LAMMPS"
+
+# Create a regular blog post
+./scripts/create_blog_post.sh "My Thoughts on Jekyll" blog-post "" "Personal reflections"
 
 # With description
-./scripts/create_research_note.sh "Coupling Tests" "Designing a Silicon Nitride Waveguide" "Testing fiber coupling efficiency"
+./scripts/create_blog_post.sh "Coupling Tests" research-note "Designing a Silicon Nitride Waveguide" "Testing fiber coupling efficiency"
 ```
 
 **Features:**
 - Command-line argument support
 - Interactive prompts for tags and categories
-- Project validation against existing projects
+- Project validation against existing projects (for research notes)
 - Colored output for better UX
+- Automatic tagging (research notes get 'research-note' tag)
 
-### 2. `create_research_note_simple.py` (Python - Recommended)
+### 2. `create_blog_post.py` (Python - Recommended)
 A Python script with interactive prompts and better error handling.
 
 **Usage:**
 ```bash
-python3 scripts/create_research_note_simple.py
+python3 scripts/create_blog_post.py
 ```
 
 **Features:**
-- Interactive project selection from available projects
+- Interactive post type selection (research note vs blog post)
+- Interactive project selection from available projects (for research notes)
 - Input validation and error handling
 - Colored terminal output
 - No external dependencies (uses only Python standard library)
 - YAML front matter generation
 - Summary and confirmation before creation
-
-### 3. `create_research_note.py` (Python - Advanced)
-Full-featured Python script with command-line options (requires PyYAML).
-
-**Installation:**
-```bash
-pip install PyYAML
-```
-
-**Usage:**
-```bash
-# Interactive mode
-python3 scripts/create_research_note.py
-
-# Command-line mode
-python3 scripts/create_research_note.py --title "Note Title" --project "Project Name" --description "Description"
-```
+- Automatic tagging for research notes
 
 ## Generated File Structure
 
-All scripts create files with this structure:
+All scripts create blog post files with this structure:
 
+### For Research Notes:
 ```markdown
 ---
-layout: research_note
-title: "Your Note Title"
+layout: post
+title: "Your Research Note Title"
 date: 2025-08-05
 description: "Brief description"
 tags:
+  - research-note
   - tag1
   - tag2
 categories:
-  - category1
+  - research
 related_project: "Project Name"
 featured: false
 ---
@@ -83,16 +78,34 @@ featured: false
 [Template content...]
 ```
 
+### For Regular Blog Posts:
+```markdown
+---
+layout: post
+title: "Your Blog Post Title"
+date: 2025-08-05
+description: "Brief description"
+tags:
+  - blog
+  - tag1
+categories:
+  - category1
+featured: false
+---
+
+Write your blog post content here...
+```
+
 ## Common Workflow
 
-1. **Create a new research note:**
+1. **Create a new blog post:**
    ```bash
-   python3 scripts/create_research_note_simple.py
+   python3 scripts/create_blog_post.py
    ```
 
 2. **Edit the generated file:**
    ```bash
-   code _research_notes/2025-08-05-your-note-title.md
+   code _posts/2025-08-05-your-post-title.md
    ```
 
 3. **Preview locally:**
@@ -100,28 +113,43 @@ featured: false
    bundle exec jekyll serve
    ```
 
-4. **View at:** `http://localhost:4000/research-notes/`
+4. **View blog posts:** `http://localhost:4000/blog/`
+5. **Filter research notes:** `http://localhost:4000/blog/tag/research-note/`
 
 ## Tips
 
-### Project Names
+### Post Types
+- **Research Notes**: Use for research-related content, automatically tagged with `research-note`
+- **Blog Posts**: Use for general content, tutorials, personal thoughts, etc.
+
+### Project Names (Research Notes Only)
 - Use exact project titles as they appear in `_projects/*.md`
 - Scripts will validate against existing projects
 - You can still use custom project names if needed
 
 ### Tags and Categories
-**Common tags:** `simulation`, `experiment`, `analysis`, `literature-review`, `methodology`, `results`, `molecular-dynamics`, `photonics`, `optimization`
+**Research Note tags:** `research-note`, `simulation`, `experiment`, `analysis`, `literature-review`, `methodology`, `results`, `molecular-dynamics`, `photonics`, `optimization`
 
-**Common categories:** `simulation`, `experiment`, `analysis`, `literature-review`, `methodology`, `results`
+**Blog Post tags:** `technology`, `personal`, `tutorial`, `update`, `jekyll`, `programming`
 
-### Featured Notes
+**Common categories:** `research`, `blog`, `technology`, `personal`, `tutorial`, `project`
+
+### Featured Posts
 - Set `featured: true` to display in the featured section
-- Featured notes appear at the top of the research notes page
+- Featured posts appear at the top of the blog page
 
 ### File Naming
 Scripts automatically create slugs from titles:
 - "LAMMPS Parameter Study" → `2025-08-05-lammps-parameter-study.md`
-- "Waveguide Mode Analysis" → `2025-08-05-waveguide-mode-analysis.md`
+- "My Jekyll Setup" → `2025-08-05-my-jekyll-setup.md`
+
+## Filtering and Organization
+
+The blog system supports filtering:
+- **All posts**: `/blog/`
+- **Research notes only**: `/blog/tag/research-note/`
+- **By tag**: `/blog/tag/[tag-name]/`
+- **By category**: `/blog/category/[category-name]/`
 
 ## Troubleshooting
 
@@ -129,7 +157,7 @@ Scripts automatically create slugs from titles:
 Run scripts from the main site directory (where `_config.yml` is located):
 ```bash
 cd /path/to/your/site
-python3 scripts/create_research_note_simple.py
+python3 scripts/create_blog_post.py
 ```
 
 ### "File already exists"
@@ -141,16 +169,14 @@ Either:
 ### Permission denied
 Make scripts executable:
 ```bash
-chmod +x scripts/create_research_note.sh
-chmod +x scripts/create_research_note_simple.py
+chmod +x scripts/create_blog_post.sh
+chmod +x scripts/create_blog_post.py
 ```
 
 ## Customization
 
 ### Modify Template Content
-Edit the template content in the script files (search for "Template content" section).
-
-### Add Custom Fields
+Edit the template content in the script files (search for "get_template_content" function).
 Modify the front matter generation section to include additional fields like:
 - `author`
 - `thumbnail`
