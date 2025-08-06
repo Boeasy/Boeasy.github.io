@@ -33,6 +33,16 @@ pagination:
   </div>
 {% endif %}
 
+<!-- Custom introduction section -->
+<div class="introduction">
+  <p>Welcome to my research notes collection. Here you'll find detailed observations, methodologies, and findings from my ongoing research projects. Each note is linked to a specific project and includes relevant tags and categories for easy navigation.</p>
+  
+  <div class="alert alert-info">
+    <i class="fa-solid fa-lightbulb"></i> 
+    <strong>Tip:</strong> Use the project links to see all notes related to a specific research area, or browse by tags to find notes on particular methodologies or topics.
+  </div>
+</div>
+
 {% if site.display_research_note_tags and site.display_research_note_tags.size > 0 or site.display_research_note_categories and site.display_research_note_categories.size > 0 %}
   <div class="tag-category-list">
     <ul class="p-0 m-0">
