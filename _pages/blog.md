@@ -1,9 +1,9 @@
 ---
 layout: default
 permalink: /blog/
-title: Updates
-nav: false
-#nav_order: 
+title: blog
+nav: true
+nav_order: 4
 pagination:
   enabled: true
   collection: posts
@@ -28,6 +28,14 @@ pagination:
     <h2>{{ site.blog_description }}</h2>
   </div>
   {% endif %}
+
+<!-- Quick filter for research notes -->
+<div class="alert alert-info">
+  <i class="fa-solid fa-filter alert-icon"></i>
+  <strong>Quick Filter:</strong> 
+  <a href="{{ '/blog/tag/research-note/' | relative_url }}" class="btn btn-sm btn-outline-primary">Research Notes</a>
+  <a href="{{ '/blog/' | relative_url }}" class="btn btn-sm btn-outline-secondary">All Posts</a>
+</div>
 
 {% if site.display_tags and site.display_tags.size > 0 or site.display_categories and site.display_categories.size > 0 %}
 

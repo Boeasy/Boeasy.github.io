@@ -2,10 +2,16 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: Need to fill this in more, and organize my code such that it's viewable...
+description: My code repositories and related research documentation.
 nav: true
 nav_order: 2
 ---
+
+<div class="alert alert-info">
+  <i class="fa-solid fa-info-circle alert-icon"></i>
+  <strong>Note:</strong> For detailed research notes and documentation related to these repositories, 
+  check out my <a href="{{ '/blog/tag/research-note/' | relative_url }}">research blog posts</a>.
+</div>
 
 {% if site.data.repositories.github_users %}
 

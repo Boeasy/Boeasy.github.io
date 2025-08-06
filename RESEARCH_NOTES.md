@@ -1,15 +1,15 @@
-# Research Notes System
+# Research Notes System (Now Blog-Based)
 
-This repository now includes a research notes system that allows you to create and manage notes related to your research projects.
+This repository now includes a blog-based research notes system that uses blog posts with special tagging to organize research content alongside regular blog posts.
 
 ## Overview
 
-The research notes system consists of:
-- A new `research_notes` collection
-- A dedicated research notes page at `/research-notes/`
-- A custom layout for research notes with project linking
+The research notes system now consists of:
+- Blog posts with a special `research-note` tag
+- A blog page at `/blog/` with filtering capabilities
 - Integration with existing project pages
-- Templates for creating new notes
+- Unified content management system
+- Templates for creating new posts
 
 ## Creating Research Notes
 
@@ -19,33 +19,38 @@ The easiest way to create research notes is using the automated scripts:
 
 ```bash
 # Interactive Python script (recommended)
-python3 scripts/create_research_note_simple.py
+python3 scripts/create_blog_post.py
 
 # Bash script with arguments
-./scripts/create_research_note.sh "Note Title" "Project Name" ["Description"]
+./scripts/create_blog_post.sh "Note Title" research-note "Project Name" ["Description"]
 ```
 
 The scripts will:
 - Auto-generate proper front matter
-- Validate project names against existing projects
+- Validate project names against existing projects (for research notes)
 - Create appropriate file names and slugs
-- Provide a template structure
+- Provide template structure based on post type
 - Handle tags and categories interactively
+- Automatically add `research-note` tag for research notes
 
 See `scripts/README.md` for detailed usage instructions.
 
 ### 2. Manual Creation
 
-Create a new markdown file in the `_research_notes/` directory with the following format:
+Create a new markdown file in the `_posts/` directory with the following format:
 
 ```markdown
 ---
-layout: research_note
+layout: post
 title: "Your Research Note Title"
 date: 2025-08-05
 description: "Brief description of the research note"
-tags: [tag1, tag2, tag3]
-categories: [category]
+tags:
+  - research-note
+  - tag1
+  - tag2
+categories:
+  - research
 related_project: "Exact Project Title"
 featured: false
 ---
@@ -53,12 +58,13 @@ featured: false
 Your content here...
 ```
 
-### 2. Using the Template
+### 3. Using the Template
 
-Copy the template from `_templates/research_notes/template.md` and customize it:
+Copy a template structure for quick creation:
 
 ```bash
-cp _templates/research_notes/template.md _research_notes/YYYY-MM-DD-your-note-title.md
+# Copy an existing research note post and modify it
+cp _posts/2025-08-05-test-research-note.md _posts/YYYY-MM-DD-your-note-title.md
 ```
 
 ## Linking to Projects
@@ -74,62 +80,111 @@ Example:
 
 ## Features
 
-### Research Notes Page
-- View at `/research-notes/`
-- Paginated listing of all research notes
-- Featured notes section
-- Links to related projects
+### Blog Page with Filtering
+- View all posts at `/blog/`
+- Quick filter for research notes: `/blog/tag/research-note/`
+- Filter by any tag: `/blog/tag/[tag-name]/`
+- Filter by category: `/blog/category/[category-name]/`
+- Featured posts section
+- Pagination support
 
 ### Project Integration
-- Project pages automatically show related research notes
-- Links back to the main research notes page
-
-### Custom Layout
-- Research notes use the `research_note` layout
-- Shows related project information at the top
+- Project pages can show related research notes
+- Research notes can link back to projects
 - Links to other notes from the same project
-- Proper tagging and categorization
+
+### Unified Content Management
+- All content in `_posts/` directory
+- Uses standard Jekyll blog functionality
+- No custom collections or layouts
+- Consistent with Jekyll best practices
 
 ### Navigation
-- Research notes page is in the main navigation (nav_order: 3)
-- Consistent with blog page styling
+- Blog page is in the main navigation
+- Easy filtering between all posts and research notes
+- Consistent styling across all post types
 
 ## File Structure
 
 ```
-_research_notes/           # Collection directory
-├── 2025-08-03-quantum-photonics-review.md
-├── 2025-08-04-waveguide-modes.md
-└── 2025-08-05-lammps-optimization.md
+_posts/                    # All blog posts and research notes
+├── 2025-08-04-first-post.md
+├── 2025-08-05-test-research-note.md
+└── 2025-08-05-your-new-post.md
 
-_templates/research_notes/ # Templates
-└── template.md
-
-_layouts/
-└── research_note.liquid  # Custom layout
-
-_includes/
-└── research_notes.liquid # Include for project pages
+scripts/                   # Generation scripts
+├── create_blog_post.py    # Python script (recommended)
+├── create_blog_post.sh    # Bash script
+└── README.md
 
 _pages/
-└── research_notes.md     # Main research notes page
+├── blog.md               # Main blog page with filtering
+└── ...
+
+_projects/                # Project pages (for linking)
+├── Molecular_Dynamics.md
+└── Waveguide.md
 ```
 
-## Frontmatter Options
+## Front Matter Options
 
-- `layout`: Must be `research_note`
+### For Research Notes:
+- `layout`: Must be `post`
 - `title`: Title of the research note
 - `date`: Date in YYYY-MM-DD format
 - `description`: Brief description shown in listings
-- `tags`: Array of tags for categorization
+- `tags`: Array of tags (must include `research-note`)
 - `categories`: Array of categories
 - `related_project`: Exact project title for linking
 - `featured`: Set to `true` to show in featured section
-- `thumbnail`: Optional image for the note
+
+### For Regular Blog Posts:
+- `layout`: Must be `post`
+- `title`: Title of the blog post
+- `date`: Date in YYYY-MM-DD format
+- `description`: Brief description
+- `tags`: Array of tags
+- `categories`: Array of categories
+- `featured`: Set to `true` to show in featured section
 
 ## Examples
 
-See the existing research notes for examples:
-- `/research-notes/2025/quantum-photonic-integration/`
-- `/research-notes/2025/waveguide-mode-analysis-results/`
-- `/research-notes/2025/lammps-simulation-parameters-optimization/`
+See the existing posts for examples:
+- `/blog/` - All posts
+- `/blog/tag/research-note/` - Research notes only
+- Individual posts show proper tagging and project links
+
+## Styling and Theme Support
+
+The system includes theme-aware alert/note styling that adapts to both light and dark modes:
+
+### Alert Types
+
+```html
+<!-- Info/Tip alerts (blue theme) -->
+<div class="alert alert-info">
+  <i class="fa-solid fa-lightbulb alert-icon"></i>
+  <strong>Tip:</strong> Your tip content here.
+</div>
+
+<!-- Warning alerts (yellow/orange theme) -->
+<div class="alert alert-warning">
+  <i class="fa-solid fa-exclamation-triangle alert-icon"></i>
+  <strong>Important:</strong> Your warning content here.
+</div>
+
+<!-- Danger alerts (red theme) -->
+<div class="alert alert-danger">
+  <i class="fa-solid fa-times-circle alert-icon"></i>
+  <strong>Error:</strong> Your error content here.
+</div>
+```
+
+### Theme Adaptation
+
+- **Light Mode**: Uses light backgrounds with darker text for better readability
+- **Dark Mode**: Uses darker backgrounds with lighter text and adjusted colors
+- **Icons**: Automatically color-matched to the alert theme
+- **Links**: Inherit theme colors and hover states
+
+The research notes section cards also automatically adapt to the current theme with proper background colors, text colors, and border styles.
