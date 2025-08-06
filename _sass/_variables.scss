@@ -5,29 +5,46 @@
 
 @use "sass:color";
 
-// Colors
-$red-color: #ff3636 !default;
-$red-color-dark: #b71c1c !default;
-$orange-color: #f29105 !default;
-$blue-color: #0076df !default;
-$blue-color-dark: #00369f !default;
-$cyan-color: #2698ba !default;
-$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
-$green-color: #00ab37 !default;
-$green-color-lime: #b7d12a !default;
-$green-color-dark: #009f06 !default;
-$green-color-light: #ddffdd !default;
-$green-color-bright: #11d68b !default;
-$purple-color: #b509ac !default;
-$light-purple-color: color.adjust($purple-color, $lightness: 25%);
-$pink-color: #f92080 !default;
-$pink-color-light: #ffdddd !default;
-$yellow-color: #efcc00 !default;
+// Colors - Modern Palette
 
-$grey-color: #828282 !default;
-$grey-color-light: color.adjust($grey-color, $lightness: 40%);
-$grey-color-dark: #1c1c1d;
-$grey-900: #212529;
+// Original theme colors (commented for reference)
+// $red-color: #ff3636 !default;
+// $red-color-dark: darken($red-color, 25%);
+// $orange-color: #f29105 !default;
+// $blue-color: #2698ba !default;
+// $blue-color-dark: #1e6091 !default;
+// $cyan-color: #2698ba !default;
+// $green-color: #00d000 !default;
+// $purple-color: #b509ac !default;
+// $pink-color: #f92080 !default;
+// $yellow-color: #ffcc02 !default;
+// $grey-color: #999999 !default;
+// $grey-color-light: #f8f9fa !default;
+// $grey-color-dark: #343a40 !default;
+
+// Modern color palette
+$red-color: #ef4444 !default;        // Modern red
+$red-color-dark: #dc2626 !default;   // Darker red
+$orange-color: #f97316 !default;     // Modern orange
+$blue-color: #3b82f6 !default;       // Modern blue
+$blue-color-dark: #2563eb !default;  // Darker blue
+$cyan-color: #06b6d4 !default;       // Modern cyan
+$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
+$green-color: #10b981 !default;      // Modern green
+$green-color-lime: #84cc16 !default; // Modern lime
+$green-color-dark: #059669 !default; // Darker green
+$green-color-light: #dcfce7 !default; // Light green
+$green-color-bright: #22d3ee !default; // Bright teal
+$purple-color: #8b5cf6 !default;     // Modern purple
+$light-purple-color: color.adjust($purple-color, $lightness: 25%);
+$pink-color: #ec4899 !default;       // Modern pink
+$pink-color-light: #fce7f3 !default; // Light pink
+$yellow-color: #f59e0b !default;     // Modern amber
+
+$grey-color: #6b7280 !default;       // Modern neutral gray
+$grey-color-light: #f3f4f6 !default; // Very light gray
+$grey-color-dark: #111827 !default;  // Very dark gray
+$grey-900: #0f172a !default;         // Almost black
 
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
