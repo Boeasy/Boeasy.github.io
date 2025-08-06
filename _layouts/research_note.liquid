@@ -1,0 +1,128 @@
+---
+layout: default
+---
+{% assign year = page.date | date: '%Y' %}
+{% assign tags = page.tags | join: '' %}
+{% assign categories = page.categories | join: '' %}
+{% assign url_beginning = page.url | slice: 0, 16 %}
+
+{% if page._styles %}
+  <!-- Page/Post style -->
+  <style type="text/css">
+    {{ page._styles }}
+  </style>
+{% endif %}
+
+<div class="post">
+  <header class="post-header">
+    {% if page.related_project %}
+      {% assign project = site.projects | where: "title", page.related_project | first %}
+      {% if project %}
+        <div class="alert alert-info">
+          <i class="fa-solid fa-project-diagram"></i> This research note is related to: <a href="{{ project.url | relative_url }}"><strong>{{ page.related_project }}</strong></a>
+        </div>
+      {% else %}
+        <div class="alert alert-info">
+          <i class="fa-solid fa-project-diagram"></i> This research note is related to: <strong>{{ page.related_project }}</strong>
+        </div>
+      {% endif %}
+    {% endif %}
+    
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">
+      Created on {{ page.date | date: '%B %d, %Y' }}
+      {% if page.author %}by {{ page.author }}{% endif %}
+      {% if page.last_updated %}, last updated on {{ page.last_updated | date: '%B %d, %Y' }}{% endif %}
+      {% if page.meta %}• {{ page.meta }}{% endif %}
+    </p>
+    <p class="post-tags">
+      {% if url_beginning == '/research-notes/' %}
+        <a href="{{ year | prepend: '/research-notes/' | relative_url }}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
+      {% else %}
+        <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
+      {% endif %}
+      {% if tags != '' %}
+        &nbsp; &middot; &nbsp;
+        {% for tag in page.tags %}
+          {% if url_beginning == '/research-notes/' %}
+            <a href="{{ tag | slugify | prepend: '/research-notes/tag/' | relative_url }}"> <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
+          {% else %}
+            <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
+          {% endif %}
+          {% unless forloop.last %}
+            &nbsp;
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+
+      {% if categories != '' %}
+        &nbsp; &middot; &nbsp;
+        {% for category in page.categories %}
+          {% if url_beginning == '/research-notes/' %}
+            <a href="{{ category | slugify | prepend: '/research-notes/category/' | relative_url }}"> <i class="fa-solid fa-tag fa-sm"></i> {{ category -}}</a>
+          {% else %}
+            <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
+          {% endif %}
+          {% unless forloop.last %}
+            &nbsp;
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+    </p>
+  </header>
+
+  <article class="post-content">
+    {% if page.toc and page.toc.beginning %}
+      <div id="table-of-contents">
+        {% toc %}
+      </div>
+      <hr>
+    {% endif %}
+    <div id="markdown-content">
+      {{ content }}
+    </div>
+  </article>
+
+  {% if page.citation %}
+    {% include citation.liquid %}
+  {% endif %}
+
+  {% if page.related_publications %}
+    <h2>References</h2>
+    <div class="publications">
+      {% bibliography --group_by none --cited_in_order %}
+    </div>
+  {% endif %}
+
+  {% if site.related_blog_posts and site.related_blog_posts.enabled %}
+    {% if page.related_posts == null or page.related_posts %}
+      {% include related_posts.liquid %}
+    {% endif %}
+  {% endif %}
+
+  <!-- Related Research Notes -->
+  {% if page.related_project %}
+    {% assign related_notes = site.research_notes | where: "related_project", page.related_project %}
+    {% assign other_notes = related_notes | where_exp: "note", "note.url != page.url" %}
+    {% if other_notes.size > 0 %}
+      <div class="related-research-notes">
+        <h3>Other notes for {{ page.related_project }}</h3>
+        <ul>
+          {% for note in other_notes limit: 5 %}
+            <li>
+              <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
+              <span class="text-muted">- {{ note.date | date: '%B %d, %Y' }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  {% endif %}
+
+  {% if site.disqus_shortname and page.disqus_comments %}
+    {% include disqus.liquid %}
+  {% endif %}
+  {% if site.giscus and page.giscus_comments %}
+    {% include giscus.liquid %}
+  {% endif %}
+</div>

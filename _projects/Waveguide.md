@@ -79,3 +79,5 @@ Here's the code for the last row of images above:
 ```
 
 {% endraw %}
+
+{% include research_notes.liquid %}
