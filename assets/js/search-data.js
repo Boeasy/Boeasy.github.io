@@ -30,6 +30,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
+        },{id: "nav-research-notes",
+          title: "research notes",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/research-notes/index.html";
+          },
         },{id: "post-first-post",
         
           title: "First Post",
@@ -51,6 +58,21 @@ ninja.data = [{
           description: "Designing and simulating a waveguide for quantum optics applications",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Waveguide/";
+            },},{id: "research_notes-literature-review-quantum-photonic-integration",
+          title: 'Literature Review: Quantum Photonic Integration',
+          description: "Summary of recent advances in silicon nitride platforms for quantum optics",
+          section: "Research_notes",handler: () => {
+              window.location.href = "/research_notes/2025-08-03-quantum-photonics-review/";
+            },},{id: "research_notes-waveguide-mode-analysis-results",
+          title: 'Waveguide Mode Analysis Results',
+          description: "Comparison of TE and TM modes in silicon nitride waveguides for quantum applications",
+          section: "Research_notes",handler: () => {
+              window.location.href = "/research_notes/2025-08-04-waveguide-modes/";
+            },},{id: "research_notes-lammps-simulation-parameters-optimization",
+          title: 'LAMMPS Simulation Parameters Optimization',
+          description: "Investigation of timestep and ensemble parameters for accurate gold stress-strain simulations",
+          section: "Research_notes",handler: () => {
+              window.location.href = "/research_notes/2025-08-05-lammps-optimization/";
             },},{
         id: 'social-email',
         title: 'email',
