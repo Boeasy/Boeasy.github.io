@@ -86,8 +86,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Updates # blog_name will be displayed in your blog page
-blog_description: Thoughts and reflections, conferences or symposiums attended.
+blog_name: blog # blog_name will be displayed in your blog page
+blog_description: posts and notes on various topics here, sorted by categories and tags.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
