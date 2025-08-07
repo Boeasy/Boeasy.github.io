@@ -54,22 +54,20 @@
     - title: Silicon Nitride Waveguide Design for Integrated Photonic Circuit
       institution: Center For Quantum Networks, University of Arizona, Tucson, Arizona, US
       year: July 2025
-      description:
+      description:    
 
-    - title: Molecular Dynamics RMACC
-      institution: Rocky Mountain Advanced Computing Consortium, Colorado School of Mines, Golden, Colorado, US
-      year: May 2025
+    - title: Molecular Dynamics Simulation of Gold Stress-Strain Curves
+      year: 2025
       description: 
-
-    - title: Molecular Dynamics MAVS
-      institution: Student Showcase, Colorado Mesa University, Grand Junction, Colorado, US
-      year: May 2025
-      description: 
-
-    - title: Molecular Dynamics COSGC
-      institution: Space Grant Consortium, Pikes Peak Community College, Colorado Springs, Colorado, US
-      year: March 2025
-      description: 
+        - Stress strain modelling of gold using molecular dynamics, FitSNAP and DFT training data.
+        - title: Poster Presentations
+          contents:
+            - "Rocky Mountain Advanced Computing Consortium - High Performance Computing Symposium, University of Colorado Boulder, Boulder, Colorado, US (May 2025) - 1st Place Award"
+            - "Student Showcase, Colorado Mesa University, Grand Junction, Colorado, US (May 2025)"
+            - "Colorado Space Grant Consortium, Pikes Peak Community College, Colorado Springs, Colorado, US (March 2025)" 
+        - title: Seminar Presentations
+          contents:
+            - "Physics Seminar, Colorado Mesa University, Grand Junction, Colorado, US (May 2025)"
 
 
 
@@ -88,8 +86,13 @@
         - Python
         - C++
         - MATLAB
+        - Julia
+        - R
     - title: Software and Tools
       items:
+        - COMSOL
+        - FitSNAP
+        - LAMMPS
         - LaTeX
         - Git
         - Jupyter Notebooks
@@ -104,16 +107,20 @@
 - title: Academic Interests
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Quantum Computing
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Materials
+        - Applications in Quantum Chemistry
+    - title: Molecular Dynamics
       items:
-        - Description 1.
+        - Machine Learning Force Field Interatomic Potentials
         - Description 2.
+    - title: Procedural Generation
+      items:
+        - Noise Functions, Simplex Noise, Perlin Noise
+        - 
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Powerlifting, Hiking, Guitar, Piano

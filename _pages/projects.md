@@ -5,7 +5,7 @@ permalink: /projects/
 description: Display of research projects
 nav: true
 nav_order: 1
-display_categories: [Undergraduate, REU]
+display_categories: [REU, Undergraduate]
 horizontal: false
 ---
 

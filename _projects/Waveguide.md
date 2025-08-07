@@ -2,82 +2,153 @@
 layout: page
 title: Designing a Silicon Nitride Waveguide
 description: Designing and simulating a waveguide for quantum optics applications
-img: assets/img/3.jpg
-importance: 2
+img: assets/img/project/Waveguide/Components/MMI.png
+importance: 1
 category: REU
-giscus_comments: true
+pdf: assets/pdf/CQN_Waveguide.pdf
+presentation: assets/pdf/CQN_Waveguide.pdf
+related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+# Integrated Photonic Circuits
+Project motivation, entanglement swap
+## Project Motivation
+A qubit is the basic unit of quantum information, analogous to a classical bit, but can exist in a superposition of states:
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+\begin{equation}
+\ket{\psi} =\alpha \ket{0} +\beta \ket{1} \qquad \qquad \left|  \alpha^{2} \right|+\left|  \beta^{2} \right|=1 
+\end{equation}
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Entanglement is when two qubits are linked such that one’s state can be inferred from the other, for example this Bell state:
+
+\begin{equation}
+\ket{\Phi^+} = \frac{1}{\sqrt{ 2 }}(\ket{00} +\ket{11} )
+\end{equation}
+
+If we have two pairs of photons entangled A with B, and C with D, we can remotely entangle A&D together by performing a bell state measurement on B&C. This is ‘Entanglement Swapping. To perform this measurement, the photon qubit pairs must be indistinguishable, therefore the information of which path they came from must be erased. This is done through Hong-Ou-Mandel interference – when the pairs are incident on a 50:50 beam splitter, they interfere with one another resulting in both photons exiting the same side of the beam splitter, regardless of their starting path.
+
+## Entanglement Swapping
+
+Through entanglement swapping, two distant qubits can be remotely entangled. This would allow for increased scalability of quantum computers through distributed computing, as well as increased scalability of quantum networks through quantum repeaters. 
+
+Entanglement can be achieved with photons through several degrees of freedom, such as spatially, temporally (or time-bin), or most commonly through polarization. This design focuses on photon pairs encoded through their polarizations, with states:
+
+\begin{equation}
+\ket{H} \qquad \ket{V} 
+\end{equation}
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        {% include figure.liquid loading="eager" path="assets/img/project/Waveguide/Motivation/EnSw.png" title="Entanglement Swapping Scheme" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Entanglement swapping protocol showing the measurement setup with 50:50 beamsplitter and polarizing beam splitters.
+</div>
+
+The qubit pairs are incident on a 50:50 beamsplitter, which leads them to polarizing beam splitters for measurement. The detectors give ”click patterns” corresponding to the measurements – of 8 possible patterns, 4 of them correspond to a successful entanglement. 
+
+{% cite Dhara2023 %}
+
+# Design Considerations
+Because this design is for polarization entangled qubit sources, the design requires polarization insensitivity.
+
+## Material
+Silicon Nitride $$Si_3N_4$$ is chosen as the core material with a Silicon Dioxide $$SiO_2$$ cladding.
+
+## Geometry
+To minimize polarization sensitivity, we want to avoid confining the wave in the vertical orientation. A pure rectangular or square waveguide is difficult to fabricate at these dimensions, so a double stripe geometry is used.
+
+## Components
+Multimode interference couplers are used to build Mach-Zehnder interferometers to replace the beam splitters in the theoretical design. These are chosen over directional couplers to accomodate the dual polarizations.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/Waveguide/Components/MMI.png" title="Multimode Interference Coupler Design" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/Waveguide/Components/MMI2.png" title="MMI Coupler Configuration" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Multimode interference (MMI) coupler
 </div>
+
+# Simulations
+## COMSOL
+COMSOL was used to simulate the waveguide design.
+
+
+## Methods
+3D simulations of the multimode interference coupler would be ideal but are not feasible with the hardware available.
+
+### Effective Index Method
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/project/Waveguide/cross sections/mode1.png" title="TE" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/project/Waveguide/cross sections/mode2.png" title="TM" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+   TM (left) and TE (right) fundamental modes
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+The effective index method was used to approximate the behavior of the multimode interference coupler. 2D simulations are done in COMSOL of the tranverse cross sections of the multimode interference coupler at key locations and an effective index is extracted. These values are linearly interpolated between and this function informs a simulation of the 2D longitudinal cross section of the multimode interference coupler.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+## Results
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        {% include figure.liquid loading="eager" path="assets/img/project/Waveguide/cross sections/freq_domain.png" title="Entanglement Swapping Scheme" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    frequency domain simulation of the multimode interference coupler using the effective index method
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+Currently the maximum transmittance found is 46.75%.
 
-{% raw %}
+## Embedded Document Preview
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
+<div class="alert alert-info">
+    <i class="fa-solid fa-info-circle alert-icon"></i>
+    <strong>Note:</strong> You can preview the technical report below or <a href="{{ '/assets/pdf/CQN_Waveguide.pdf' | relative_url }}" target="_blank">download it directly</a>.
 </div>
-```
 
-{% endraw %}
+<div class="row">
+    <div class="col-12">
+        <div class="embed-responsive embed-responsive-4by3" style="height: 600px;">
+            <iframe class="embed-responsive-item" src="{{ '/assets/pdf/CQN_Waveguide.pdf' | relative_url }}" type="application/pdf" style="width: 100%; height: 100%;">
+                <p>Your browser does not support PDFs. <a href="{{ '/assets/pdf/CQN_Waveguide.pdf' | relative_url }}">Download the PDF</a>.</p>
+            </iframe>
+        </div>
+    </div>
+</div>
+
+## Project Documentation
+
+<div class="row mt-3">
+    <div class="col-md-6">
+        <div class="alert alert-info">
+            <i class="fa-solid fa-file-pdf alert-icon"></i>
+            <strong>Technical Report:</strong><br>
+            <a href="{{ '/assets/pdf/CQN_Waveguide.pdf' | relative_url }}" target="_blank" class="btn btn-outline-primary btn-sm mt-2">
+                <i class="fa-solid fa-download"></i> Download Report
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="alert alert-warning">
+            <i class="fa-solid fa-presentation-screen alert-icon"></i>
+            <strong>Presentation:</strong><br>
+            <a href="{{ '/assets/pdf/CQN_Waveguide.pdf' | relative_url }}" target="_blank" class="btn btn-outline-warning btn-sm mt-2">
+                <i class="fa-solid fa-eye"></i> View Document
+            </a>
+        </div>
+    </div>
+</div>
 
 {% include research_notes.liquid %}
