@@ -70,9 +70,14 @@ ninja.data = [{
             window.location.href = "/blog/2025/first-post/";
           
         },
-      },{id: "projects-modelling-gold-stress-strain-curves-in-lammps",
+      },{id: "projects-density-functional-theory",
+          title: 'Density Functional Theory',
+          description: "Beginning work on learning density functional theory",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/DFT/";
+            },},{id: "projects-modelling-gold-stress-strain-curves-in-lammps",
           title: 'Modelling Gold Stress Strain Curves in LAMMPS',
-          description: "with background image",
+          description: "Molecular Dynamics simulations using machine learning force field interatomic potentials",
           section: "Projects",handler: () => {
               window.location.href = "/projects/Molecular_Dynamics/";
             },},{id: "projects-designing-a-silicon-nitride-waveguide",
