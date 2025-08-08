@@ -14,13 +14,6 @@
     - title: Bachelor of Science in Physics
       institution: Colorado Mesa University, Grand Junction, Colorado, US
       year: 2026
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
 
 - title: Research Experience
   type: time_table
@@ -29,23 +22,13 @@
       institution: Center For Quantum Networks, University of Arizona, Tucson, Arizona, US
       year: 2025
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
+        - Design of a silicon nitride waveguide for integrated photonic circuit that enables entanglement swapping.
+        
     - title: Undergraduate Research
       institution: Colorado Mesa University, Grand Junction, Colorado, US
       year: 2024-2025
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-
+        - Molecular dynamics simulations of gold using LAMMPS and machine learning interatomic potentials built through FitSNAP. 
 
 - title: Presentations
   type: time_table
@@ -54,7 +37,11 @@
     - title: Silicon Nitride Waveguide Design for Integrated Photonic Circuit
       institution: Center For Quantum Networks, University of Arizona, Tucson, Arizona, US
       year: July 2025
-      description:    
+      description:   
+        - Design of a silicon nitride waveguide for integrated photonic circuit that enables entanglement swapping.
+        - title: Poster Presentations
+          contents:
+            - Virtual Poster Presentation at the Center For Quantum Networks, University of Arizona, Tucson, Arizona, US (July 2025)
 
     - title: Molecular Dynamics Simulation of Gold Stress-Strain Curves
       year: 2025
@@ -69,14 +56,13 @@
           contents:
             - "Physics Seminar, Colorado Mesa University, Grand Junction, Colorado, US (May 2025)"
 
-
-
 - title: Honors and Awards
   type: time_table
   contents:
     - year: 2025
       items:
         - 1st Place, RMACC HPC Conference Poster Competition
+        - NASA Bridge Program Scholar
 
 - title: Skills
   type: nested_list
@@ -93,13 +79,12 @@
         - COMSOL
         - FitSNAP
         - LAMMPS
-        - LaTeX
-        - Git
-        - Jupyter Notebooks
+        - DFT Julia
 
 - title: Affiliations
   type: list
   contents:
+    - EWD Officer, Center For Quantum Networks SPLC, University of Arizona
     - Officer, Society of Physics Students, Colorado Mesa University
     - Member, American Physical Society
 
@@ -114,11 +99,11 @@
     - title: Molecular Dynamics
       items:
         - Machine Learning Force Field Interatomic Potentials
-        - Description 2.
+        - Surface effects
+        - Large Scale Simulations
     - title: Procedural Generation
       items:
         - Noise Functions, Simplex Noise, Perlin Noise
-        - 
 
 - title: Other Interests
   type: list
