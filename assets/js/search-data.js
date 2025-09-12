@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-test-note",
+        },{id: "post-demonstrating-1-qubit-state",
+        
+          title: "Demonstrating 1-qubit state",
+        
+        description: "1-qubit state animation",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/1qubit-jupyter/";
+          
+        },
+      },{id: "post-test-note",
         
           title: "test note",
         

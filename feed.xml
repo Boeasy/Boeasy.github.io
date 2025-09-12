@@ -1,1 +1,241 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://boeasy.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://boeasy.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-08-08T16:53:25+00:00</updated><id>https://boeasy.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">test post 2</title><link href="https://boeasy.github.io/blog/2025/test-post-2/" rel="alternate" type="text/html" title="test post 2"/><published>2025-08-05T00:00:00+00:00</published><updated>2025-08-05T00:00:00+00:00</updated><id>https://boeasy.github.io/blog/2025/test-post-2</id><content type="html" xml:base="https://boeasy.github.io/blog/2025/test-post-2/"><![CDATA[<p>Write your blog post content here…</p> <h2 id="introduction">Introduction</h2> <p>Start with an engaging introduction.</p> <h2 id="main-content">Main Content</h2> <p>Add your main content sections here.</p> <h2 id="conclusion">Conclusion</h2> <p>Wrap up your thoughts.</p>]]></content><author><name></name></author><category term="category"/><category term="tags"/><summary type="html"><![CDATA[testing out the new blog script agian]]></summary></entry><entry><title type="html">test note</title><link href="https://boeasy.github.io/blog/2025/test-research-note/" rel="alternate" type="text/html" title="test note"/><published>2025-08-05T00:00:00+00:00</published><updated>2025-08-05T00:00:00+00:00</updated><id>https://boeasy.github.io/blog/2025/test-research-note</id><content type="html" xml:base="https://boeasy.github.io/blog/2025/test-research-note/"><![CDATA[<h2 id="overview">Overview</h2> <p>Brief overview of what this note covers.</p> <div class="alert alert-info"> <i class="fa-solid fa-lightbulb alert-icon"></i> <strong>Tip:</strong> This research note demonstrates the new alert styling that adapts to both light and dark themes. </div> <h2 id="methodology">Methodology</h2> <p>Describe the methods or approach used.</p> <div class="alert alert-warning"> <i class="fa-solid fa-exclamation-triangle alert-icon"></i> <strong>Important:</strong> Remember to validate your simulation parameters before running extensive calculations. </div> <h2 id="results">Results</h2> <p>Present your findings here.</p> <h3 id="key-findings">Key Findings</h3> <ol> <li>First finding</li> <li>Second finding</li> <li>Third finding</li> </ol> <h2 id="discussion">Discussion</h2> <p>Discuss implications and interpretations.</p> <h2 id="next-steps">Next Steps</h2> <ul class="task-list"> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled"/>Action item 1</li> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled"/>Action item 2</li> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled"/>Action item 3</li> </ul> <h2 id="references">References</h2> <ul> <li>Reference 1</li> <li>Reference 2</li> </ul>]]></content><author><name></name></author><category term="research"/><category term="research-note"/><category term="waveguide"/><category term="silicon-nitride"/><summary type="html"><![CDATA[This is a test note to make sure this isn't breaking pagination.]]></summary></entry><entry><title type="html">First Post</title><link href="https://boeasy.github.io/blog/2025/first-post/" rel="alternate" type="text/html" title="First Post"/><published>2025-08-02T00:00:00+00:00</published><updated>2025-08-02T00:00:00+00:00</updated><id>https://boeasy.github.io/blog/2025/first-post</id><content type="html" xml:base="https://boeasy.github.io/blog/2025/first-post/"><![CDATA[<p>Just writing some things in here to see how this work, if it pops up on the front page etc.</p> <p>More to come when I know how to actually use this.</p> <h4 id="hipster-list">Hipster list</h4> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> <h4 id="check-list">Check List</h4> <ul class="task-list"> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked"/>Brush Teeth</li> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled"/>Put on socks <ul class="task-list"> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked"/>Put on left sock</li> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled"/>Put on right sock</li> </ul> </li> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked"/>Go to school</li> </ul> <p>Need to learn some of this markdown formatting…</p> <hr/> <p>blank blank blank</p> <blockquote> <p>Do the alligator signs make quotes? —me</p> </blockquote> <p>Some more words</p>]]></content><author><name></name></author><category term="posts"/><summary type="html"><![CDATA[Testing out the posting system]]></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://boeasy.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://boeasy.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-09-12T18:13:09+00:00</updated><id>https://boeasy.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">Demonstrating 1-qubit state</title><link href="https://boeasy.github.io/blog/2025/1qubit-jupyter/" rel="alternate" type="text/html" title="Demonstrating 1-qubit state"/><published>2025-09-12T15:34:00+00:00</published><updated>2025-09-12T15:34:00+00:00</updated><id>https://boeasy.github.io/blog/2025/1qubit-jupyter</id><content type="html" xml:base="https://boeasy.github.io/blog/2025/1qubit-jupyter/"><![CDATA[<script src="https://cdn.plot.ly/plotly-latest.min.js"></script> <div class="container" style="max-width: 1200px; margin: 0 auto;"> <div class="controls" style="background-color: var(--global-bg-color, #f8f9fa); padding: 20px; border-radius: 8px; margin-bottom: 20px;"> <div class="control-group" style="margin-bottom: 15px;"> <label for="angleSlider" style="display: inline-block; width: 80px; font-weight: bold;">θ:</label> <input type="range" id="angleSlider" style="width: 400px; margin-left: 10px;" min="0" max="6.283185" step="0.05" value="0"/> <span id="angleDisplay" style="margin-left: 15px; font-weight: bold; background-color: var(--global-bg-color, #fff); padding: 5px 10px; border-radius: 4px; border: 1px solid var(--global-divider-color, #ddd);">θ = 0</span> </div> <div class="control-group" style="margin-bottom: 15px;"> <label for="timeSlider" style="display: inline-block; width: 80px; font-weight: bold;">Time:</label> <input type="range" id="timeSlider" style="width: 400px; margin-left: 10px;" min="0" max="12.566370" step="0.1" value="0"/> </div> </div> <div class="plots-container" style="display: flex; gap: 20px; margin-bottom: 20px;"> <div class="plot-panel" style="flex: 1; background-color: var(--global-bg-color, #fff); border-radius: 8px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"> <h3 style="margin-top: 0; margin-bottom: 15px; text-align: center; border-bottom: 2px solid var(--global-theme-color, #3498db); padding-bottom: 8px;">1-Qubit State</h3> <div id="unitCirclePlot"></div> </div> <div class="plot-panel" style="flex: 1; background-color: var(--global-bg-color, #fff); border-radius: 8px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);"> <h3 style="margin-top: 0; margin-bottom: 15px; text-align: center; border-bottom: 2px solid var(--global-theme-color, #3498db); padding-bottom: 8px;">Photon Polarization</h3> <div id="photonWavePlot"></div> </div> </div> </div> <style>@media(max-width:768px){.plots-container{flex-direction:column!important;gap:15px!important}.control-group input[type="range"]{width:250px!important}.container{margin:10px!important;padding:15px!important}}</style> <script>
+    // Initialize the plots
+    let unitCircleDiv = document.getElementById('unitCirclePlot');
+    let photonWaveDiv = document.getElementById('photonWavePlot');
+    
+    // Layout for 2D unit circle plot
+    let unitCircleLayout = {
+        height: 500,
+        width: 500,
+        title: '',
+        xaxis: {
+            title: '', 
+            range: [-1.2, 1.2], 
+            showticklabels: false, 
+            showgrid: false, 
+            zeroline: false,
+            scaleanchor: 'y',
+            scaleratio: 1
+        },
+        yaxis: {
+            title: '', 
+            range: [-1.2, 1.2], 
+            showticklabels: false, 
+            showgrid: false, 
+            zeroline: false
+        },
+        margin: {l: 40, r: 40, t: 40, b: 40},
+        showlegend: false,
+        paper_bgcolor: 'rgba(0,0,0,0)',
+        plot_bgcolor: 'rgba(0,0,0,0)'
+    };
+    
+    // Layout for 3D photon wave plot
+    let photonWaveLayout = {
+        height: 500,
+        title: '',
+        scene: {
+            xaxis: {title: '', showticklabels: false, showgrid: false, zeroline: false},
+            yaxis: {title: '', showticklabels: false, showgrid: false, zeroline: false},
+            zaxis: {title: '', showticklabels: false, showgrid: false, zeroline: false},
+            camera: {eye: {x: 1.5, y: 1.5, z: 1.2}}
+        },
+        margin: {l: 40, r: 40, t: 40, b: 40},
+        showlegend: false,
+        paper_bgcolor: 'rgba(0,0,0,0)',
+        plot_bgcolor: 'rgba(0,0,0,0)'
+    };
+    
+    // Function to format angle as π fraction
+    function formatAngleAsPiFraction(angle) {
+        if (Math.abs(angle) < 0.01) return 'θ = 0';
+        if (Math.abs(angle - Math.PI/4) < 0.05) return 'θ = π/4';
+        if (Math.abs(angle - Math.PI/2) < 0.05) return 'θ = π/2';
+        if (Math.abs(angle - 3*Math.PI/4) < 0.05) return 'θ = 3π/4';
+        if (Math.abs(angle - Math.PI) < 0.05) return 'θ = π';
+        if (Math.abs(angle - 5*Math.PI/4) < 0.05) return 'θ = 5π/4';
+        if (Math.abs(angle - 3*Math.PI/2) < 0.05) return 'θ = 3π/2';
+        if (Math.abs(angle - 7*Math.PI/4) < 0.05) return 'θ = 7π/4';
+        if (Math.abs(angle - 2*Math.PI) < 0.05) return 'θ = 2π';
+        let piValue = angle / Math.PI;
+        return `θ = ${piValue.toFixed(2)}π`;
+    }
+    
+    // Function to update the visualization
+    function updateVisualization() {
+        let angle = parseFloat(document.getElementById('angleSlider').value);
+        let time = parseFloat(document.getElementById('timeSlider').value);
+        
+        // Update angle display
+        document.getElementById('angleDisplay').textContent = formatAngleAsPiFraction(angle);
+        
+        // Calculate quantum state
+        let amplitude_h_real = Math.cos(angle/2);
+        let amplitude_v_real = Math.sin(angle/2);
+        let prob_h = amplitude_h_real * amplitude_h_real;
+        let prob_v = amplitude_v_real * amplitude_v_real;
+        
+        // Calculate polarization direction (unit circle position)
+        let polarization_x = Math.cos(angle/2)*Math.cos(angle/2) - Math.sin(angle/2)*Math.sin(angle/2);
+        let polarization_y = 2 * Math.cos(angle/2) * Math.sin(angle/2);
+        
+        // === UNIT CIRCLE PLOT ===
+        let unitCircleData = [];
+        
+        // Unit circle
+        let circle_x = [];
+        let circle_y = [];
+        for (let i = 0; i <= 100; i++) {
+            let theta = i * 2 * Math.PI / 100;
+            circle_x.push(Math.cos(theta));
+            circle_y.push(Math.sin(theta));
+        }
+        
+        unitCircleData.push({
+            x: circle_x,
+            y: circle_y,
+            mode: 'lines',
+            line: {color: 'lightgray', width: 2},
+            name: 'Unit Circle'
+        });
+        
+        // Basis states |H⟩ and |V⟩
+        unitCircleData.push({
+            x: [1],
+            y: [0],
+            mode: 'markers+text',
+            marker: {size: 15, color: 'red', symbol: 'circle'},
+            text: ['|H⟩'],
+            textposition: 'bottom right',
+            name: 'Horizontal'
+        });
+        
+        unitCircleData.push({
+            x: [0],
+            y: [1],
+            mode: 'markers+text',
+            marker: {size: 15, color: 'blue', symbol: 'circle'},
+            text: ['|V⟩'],
+            textposition: 'top right',
+            name: 'Vertical'
+        });
+        
+        // Current state vector
+        unitCircleData.push({
+            x: [0, polarization_x],
+            y: [0, polarization_y],
+            mode: 'lines+markers',
+            line: {color: 'green', width: 4},
+            marker: {size: [0, 16], color: ['green', 'green']},
+            name: 'State Vector'
+        });
+        
+        // State info
+        unitCircleData.push({
+            x: [polarization_x],
+            y: [polarization_y],
+            mode: 'text',
+            text: [`|ψ⟩<br>P(H)=${prob_h.toFixed(3)}<br>P(V)=${prob_v.toFixed(3)}`],
+            textposition: 'top center',
+            name: 'State Info'
+        });
+        
+        // === 3D PHOTON WAVE ===
+        let photonWaveData = [];
+        
+        // Create 3D sine wave
+        let z_wave = [];
+        let Ex = [];
+        let Ey = [];
+        for (let i = 0; i < 200; i++) {
+            let z = i * 4 * Math.PI / 200;
+            z_wave.push(z);
+            Ex.push(polarization_x * Math.sin(z - time));
+            Ey.push(polarization_y * Math.sin(z - time));
+        }
+        
+        // 3D wave trace
+        photonWaveData.push({
+            x: Ex,
+            y: Ey,
+            z: z_wave,
+            mode: 'lines',
+            type: 'scatter3d',
+            line: {color: 'purple', width: 6},
+            name: 'Photon Wave'
+        });
+        
+        // Moving photon dot
+        let photon_pos = 2 * Math.PI + (time % (2 * Math.PI));
+        let photon_idx = Math.round(photon_pos / (4 * Math.PI) * 200);
+        if (photon_idx >= 0 && photon_idx < Ex.length) {
+            photonWaveData.push({
+                x: [Ex[photon_idx]],
+                y: [Ey[photon_idx]],
+                z: [z_wave[photon_idx]],
+                mode: 'markers',
+                type: 'scatter3d',
+                marker: {size: 8, color: 'yellow'},
+                name: 'Photon'
+            });
+        }
+        
+        // Polarization lines (every 20th point)
+        for (let i = 0; i < Ex.length; i += 20) {
+            photonWaveData.push({
+                x: [0, Ex[i]],
+                y: [0, Ey[i]],
+                z: [z_wave[i], z_wave[i]],
+                mode: 'lines',
+                type: 'scatter3d',
+                line: {color: 'black', width: 1, dash: 'dot'},
+                opacity: 0.8,
+                name: 'E-field line'
+            });
+        }
+        
+        // Propagation axis
+        photonWaveData.push({
+            x: [0, 0],
+            y: [0, 0],
+            z: [0, 4*Math.PI],
+            mode: 'lines',
+            type: 'scatter3d',
+            line: {color: 'black', width: 2, dash: 'dash'},
+            opacity: 0.7,
+            name: 'Propagation axis'
+        });
+        
+        // Coordinate axes
+        photonWaveData.push({
+            x: [-1.5, 1.5],
+            y: [0, 0],
+            z: [0, 0],
+            mode: 'lines',
+            type: 'scatter3d',
+            line: {color: 'red', width: 3},
+            name: 'Ex axis'
+        });
+        
+        photonWaveData.push({
+            x: [0, 0],
+            y: [-1.5, 1.5],
+            z: [0, 0],
+            mode: 'lines',
+            type: 'scatter3d',
+            line: {color: 'blue', width: 3},
+            name: 'Ey axis'
+        });
+        
+        // Update both plots
+        Plotly.react(unitCircleDiv, unitCircleData, unitCircleLayout);
+        Plotly.react(photonWaveDiv, photonWaveData, photonWaveLayout);
+    }
+    
+    // Add event listeners
+    document.getElementById('angleSlider').addEventListener('input', updateVisualization);
+    document.getElementById('timeSlider').addEventListener('input', updateVisualization);
+    
+    // Initialize plots
+    updateVisualization();
+</script>]]></content><author><name></name></author><category term="posts"/><category term="quantum-computing"/><category term="physics"/><category term="visualization"/><summary type="html"><![CDATA[1-qubit state animation]]></summary></entry><entry><title type="html">test post 2</title><link href="https://boeasy.github.io/blog/2025/test-post-2/" rel="alternate" type="text/html" title="test post 2"/><published>2025-08-05T00:00:00+00:00</published><updated>2025-08-05T00:00:00+00:00</updated><id>https://boeasy.github.io/blog/2025/test-post-2</id><content type="html" xml:base="https://boeasy.github.io/blog/2025/test-post-2/"><![CDATA[<p>Write your blog post content here…</p> <h2 id="introduction">Introduction</h2> <p>Start with an engaging introduction.</p> <h2 id="main-content">Main Content</h2> <p>Add your main content sections here.</p> <h2 id="conclusion">Conclusion</h2> <p>Wrap up your thoughts.</p>]]></content><author><name></name></author><category term="category"/><category term="tags"/><summary type="html"><![CDATA[testing out the new blog script agian]]></summary></entry><entry><title type="html">test note</title><link href="https://boeasy.github.io/blog/2025/test-research-note/" rel="alternate" type="text/html" title="test note"/><published>2025-08-05T00:00:00+00:00</published><updated>2025-08-05T00:00:00+00:00</updated><id>https://boeasy.github.io/blog/2025/test-research-note</id><content type="html" xml:base="https://boeasy.github.io/blog/2025/test-research-note/"><![CDATA[<h2 id="overview">Overview</h2> <p>Brief overview of what this note covers.</p> <div class="alert alert-info"> <i class="fa-solid fa-lightbulb alert-icon"></i> <strong>Tip:</strong> This research note demonstrates the new alert styling that adapts to both light and dark themes. </div> <h2 id="methodology">Methodology</h2> <p>Describe the methods or approach used.</p> <div class="alert alert-warning"> <i class="fa-solid fa-exclamation-triangle alert-icon"></i> <strong>Important:</strong> Remember to validate your simulation parameters before running extensive calculations. </div> <h2 id="results">Results</h2> <p>Present your findings here.</p> <h3 id="key-findings">Key Findings</h3> <ol> <li>First finding</li> <li>Second finding</li> <li>Third finding</li> </ol> <h2 id="discussion">Discussion</h2> <p>Discuss implications and interpretations.</p> <h2 id="next-steps">Next Steps</h2> <ul class="task-list"> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled"/>Action item 1</li> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled"/>Action item 2</li> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled"/>Action item 3</li> </ul> <h2 id="references">References</h2> <ul> <li>Reference 1</li> <li>Reference 2</li> </ul>]]></content><author><name></name></author><category term="research"/><category term="research-note"/><category term="waveguide"/><category term="silicon-nitride"/><summary type="html"><![CDATA[This is a test note to make sure this isn't breaking pagination.]]></summary></entry><entry><title type="html">First Post</title><link href="https://boeasy.github.io/blog/2025/first-post/" rel="alternate" type="text/html" title="First Post"/><published>2025-08-02T00:00:00+00:00</published><updated>2025-08-02T00:00:00+00:00</updated><id>https://boeasy.github.io/blog/2025/first-post</id><content type="html" xml:base="https://boeasy.github.io/blog/2025/first-post/"><![CDATA[<p>Just writing some things in here to see how this work, if it pops up on the front page etc.</p> <p>More to come when I know how to actually use this.</p> <h4 id="hipster-list">Hipster list</h4> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> <h4 id="check-list">Check List</h4> <ul class="task-list"> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked"/>Brush Teeth</li> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled"/>Put on socks <ul class="task-list"> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked"/>Put on left sock</li> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled"/>Put on right sock</li> </ul> </li> <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked"/>Go to school</li> </ul> <p>Need to learn some of this markdown formatting…</p> <hr/> <p>blank blank blank</p> <blockquote> <p>Do the alligator signs make quotes? —me</p> </blockquote> <p>Some more words</p>]]></content><author><name></name></author><category term="posts"/><summary type="html"><![CDATA[Testing out the posting system]]></summary></entry></feed>
