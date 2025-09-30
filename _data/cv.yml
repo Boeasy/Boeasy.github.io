@@ -1,111 +1,155 @@
+## Converted from LaTeX CV to YAML structure used by al-folio
+
 - title: General Information
   type: map
   contents:
     - name: Full Name
       value: Tyrel Boese
-    - name: Date of Birth
-      value: 23rd August 1995
-    - name: Languages
-      value: English
+    - name: Location
+      value: Grand Junction, CO, USA
+    - name: Phone
+      value: (970) 640-3328
+    - name: Email
+      value: tjboese@mavs.coloradomesa.edu
+    - name: Website
+      value: https://boeasy.github.io
 
 - title: Education
   type: time_table
   contents:
-    - title: Bachelor of Science in Physics
+    - title: B.Sc. Physics (Minor in Mathematics)
       institution: Colorado Mesa University, Grand Junction, Colorado, US
-      year: 2026
+      year: Exp May 2026
 
 - title: Research Experience
   type: time_table
   contents:
     - title: Research Internship
-      institution: Center For Quantum Networks, University of Arizona, Tucson, Arizona, US
+      institution: Center for Quantum Networks, University of Arizona
       year: 2025
       description:
-        - Design of a silicon nitride waveguide for integrated photonic circuit that enables entanglement swapping.
-        
-    - title: Undergraduate Research
-      institution: Colorado Mesa University, Grand Junction, Colorado, US
-      year: 2024-2025
+        - Design of integrated photonic circuits using heterogeneous materials
+    - title: Senior Research
+      institution: Colorado Mesa University
+      year: 2024–2025
       description:
-        - Molecular dynamics simulations of gold using LAMMPS and machine learning interatomic potentials built through FitSNAP. 
+        - Progress towards a quantum-accurate classical SNAP machine learning interaction potential for gold
+        - Multiscale modeling of ultrafast laser-induced melting and metastability in gold
+        - Applications of quantum machine learning and the Variational Quantum Eigensolver (VQE) to exchange–correlation functionals
 
-- title: Presentations
+- title: Poster Presentations
   type: time_table
   contents:
+    - title: Rocky Mountain Advanced Computing Consortium HPC Symposium Poster Competition
+      year: Spring 2025
+      description:
+        - Progress Towards a Quantum-Accurate Classical SNAP Machine Learning Interaction Potential for Gold
+        - "Authors: Tyrel Boese; Ian Anderson; James Goff; Jarrod Schiffbauer"
+        - 1st Place Award
+    - title: Colorado Mesa University Student Showcase
+      year: Spring 2025
+      description:
+        - Progress Towards a Quantum-Accurate Classical SNAP Machine Learning Interaction Potential for Gold
+        - "Authors: Tyrel Boese; Ian Anderson; James Goff; Jarrod Schiffbauer"
+    - title: Colorado Space Grant Consortium
+      year: Spring 2025
+      description:
+        - Progress Towards a Quantum-Accurate Classical SNAP Machine Learning Interaction Potential for Gold
+        - "Authors: Tyrel Boese; Ian Anderson; James Goff; Jarrod Schiffbauer"
+    - title: CQN REU Virtual Poster Presentation
+      year: Summer 2025
+      description:
+        - Designing a Waveguide for Integrated Photonics Applications
+        - "Authors: Tyrel Boese; Neshat Sadafi; Matt Eichenfield"
 
-    - title: Silicon Nitride Waveguide Design for Integrated Photonic Circuit
-      institution: Center For Quantum Networks, University of Arizona, Tucson, Arizona, US
-      year: July 2025
-      description:   
-        - Design of a silicon nitride waveguide for integrated photonic circuit that enables entanglement swapping.
-        - title: Poster Presentations
-          contents:
-            - Virtual Poster Presentation at the Center For Quantum Networks, University of Arizona, Tucson, Arizona, US (July 2025)
-
-    - title: Molecular Dynamics Simulation of Gold Stress-Strain Curves
-      year: 2025
-      description: 
-        - Stress strain modelling of gold using molecular dynamics, FitSNAP and DFT training data.
-        - title: Poster Presentations
-          contents:
-            - "Rocky Mountain Advanced Computing Consortium - High Performance Computing Symposium, University of Colorado Boulder, Boulder, Colorado, US (May 2025) - 1st Place Award"
-            - "Student Showcase, Colorado Mesa University, Grand Junction, Colorado, US (May 2025)"
-            - "Colorado Space Grant Consortium, Pikes Peak Community College, Colorado Springs, Colorado, US (March 2025)" 
-        - title: Seminar Presentations
-          contents:
-            - "Physics Seminar, Colorado Mesa University, Grand Junction, Colorado, US (May 2025)"
+- title: Seminar Presentations
+  type: time_table
+  contents:
+    - title: Designing a Waveguide for Integrated Photonics Applications
+      institution: Colorado Mesa University Physics Seminar
+      year: Fall 2025
+    - title: Progress Towards a Quantum-Accurate Classical SNAP Machine Learning Interaction Potential for Gold
+      institution: Colorado Mesa University Physics Seminar
+      year: Spring 2025
 
 - title: Honors and Awards
   type: time_table
   contents:
     - year: 2025
       items:
-        - 1st Place, RMACC HPC Conference Poster Competition
-        - NASA Bridge Program Scholar
+        - 1st Place – Rocky Mountain Advanced Computing Consortium (RMACC) HPC Poster Competition
+        - NASA Bridge Program Seed Fund (BPSF) Scholar
 
-- title: Skills
-  type: nested_list
+- title: Leadership
+  type: list
   contents:
-    - title: Programming Languages
-      items:
-        - Python
-        - C++
-        - MATLAB
-        - Julia
-        - R
-    - title: Software and Tools
-      items:
-        - COMSOL
-        - FitSNAP
-        - LAMMPS
-        - DFT Julia
+    - Engineering Workforce Development Officer, CQN Student Post-Doc Leadership Council (SPLC)
+    - Vice President, Colorado Mesa University Society of Physics Students
 
 - title: Affiliations
   type: list
   contents:
-    - EWD Officer, Center For Quantum Networks SPLC, University of Arizona
-    - Officer, Society of Physics Students, Colorado Mesa University
-    - Member, American Physical Society
+    - American Physical Society (APS) – Member
+    - Society of Physics Students (SPS) – Member
 
+- title: Skills
+  type: nested_list
+  contents:
+    - title: Analytical & Mathematical
+      items:
+        - Problem solving and quantitative modeling
+    - title: Programming
+      items:
+        - Python
+        - Fortran
+        - C++
+        - C#
+        - C
+        - MATLAB
+        - Julia
+        - R
+    - title: Tools & Frameworks
+      items:
+        - LAMMPS
+        - Quantum ESPRESSO
+        - FitSNAP
+        - COMSOL
+        - Git
+        - DFT-Julia
+
+- title: Work Experience
+  type: time_table
+  contents:
+    - title: SMB Account Executive
+      institution: Spot-On Technologies
+      year: 2023
+    - title: Multimedia Account Executive
+      institution: Gray Media
+      year: 2022
+    - title: SMB Account Executive
+      institution: Spectrum Business
+      year: 2020
 
 - title: Academic Interests
   type: nested_list
   contents:
     - title: Quantum Computing
       items:
-        - Materials
-        - Applications in Quantum Chemistry
-    - title: Molecular Dynamics
+        - Quantum materials
+        - Applications in quantum chemistry
+        - Variational Quantum Eigensolvers (VQE)
+    - title: Numerical Modeling
       items:
-        - Machine Learning Force Field Interatomic Potentials
-        - Surface effects
-        - Large Scale Simulations
+        - Molecular dynamics
+        - Machine learning force-field interatomic potentials
+        - Multiscale simulations
     - title: Procedural Generation
       items:
-        - Noise Functions, Simplex Noise, Perlin Noise
+        - Noise functions
+        - Simplex noise
+        - Perlin noise
 
-- title: Other Interests
+- title: References
   type: list
   contents:
-    - <u>Hobbies:</u> Powerlifting, Hiking, Guitar, Piano
+    - Available upon request

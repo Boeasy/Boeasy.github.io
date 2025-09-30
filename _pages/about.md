@@ -26,3 +26,5 @@ latest_posts:
 ---
 
 Portfolio for my undergraduate achievements and interests in preparation for graduate school.
+
+Currently under construction!
