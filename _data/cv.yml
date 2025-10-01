@@ -6,13 +6,7 @@
     - name: Full Name
       value: Tyrel Boese
     - name: Location
-      value: Grand Junction, CO, USA
-    - name: Phone
-      value: (970) 640-3328
-    - name: Email
-      value: tjboese@mavs.coloradomesa.edu
-    - name: Website
-      value: https://boeasy.github.io
+      value: CO, USA
 
 - title: Education
   type: time_table
