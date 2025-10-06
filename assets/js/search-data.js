@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-demonstrating-1-qubit-state",
+        },{id: "post-sps-physics-and-astronomy-congress-video",
+        
+          title: "SPS Physics and Astronomy Congress Video",
+        
+        description: "video submission describing molecular dynamics research",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/SPS-PAC-video/";
+          
+        },
+      },{id: "post-demonstrating-1-qubit-state",
         
           title: "Demonstrating 1-qubit state",
         
